@@ -10,7 +10,15 @@
 ```python
 a = {'a':1, 'b':2, 'c':3}
 b = {'aa':1, 'bb':2, 'cc':3}
+class Dog:
+    def __init__(self):
+        print("init")
 
+```
+
+```html
+<p>This is a paragraph</p>
+<a href="//docsify.js.org/">Docsify</a>
 ```
 
 
