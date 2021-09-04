@@ -34,19 +34,6 @@
           readyTransition : true, // default
           responsiveTables: true  // default
       },
-      plugins: [
-        EditOnGithubPlugin.create(
-          "https://github.com/songhaitao75/SHTTips/tree/master/docs",
-          null,
-          function(file) {
-              if (file.indexOf('en') === -1) {
-                return '编辑'
-              } else {
-                return 'edit on git'
-              }
-            }
-          )
-      ],
       darkMode: {
         dark: {
           background: "#1c2022",
@@ -59,6 +46,20 @@
           textColor: "var(--theme-color)"
         }
       },
+      // plugins: [
+      //   EditOnGithubPlugin.create(
+      //     "https://github.com/songhaitao75/SHTTips/tree/master/docs/",
+      //     // null,
+      //     // function(file) {
+      //     //     if (file.indexOf('en') === -1) {
+      //     //       return '编辑'
+      //     //     } else {
+      //     //       return 'edit on git'
+      //     //     }
+      //     //   }
+      //     )
+      // ],
+
 
     }
   </script>
@@ -80,14 +81,10 @@
   <!-- 图片缩放插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- Edit on Github 插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script> -->
 
   <!-- 复制到剪贴板插件 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 分页导航插件 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <!-- 目录开合插件 -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
   <!-- 暗模式 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
 
