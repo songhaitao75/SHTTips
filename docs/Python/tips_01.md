@@ -10,28 +10,10 @@
 ```python
 a = {'a':1, 'b':2, 'c':3}
 b = {'aa':1, 'bb':2, 'cc':3}
-class Dog:
-    def __init__(self):
-        print("init")
-
-```
-
-```html
-<p>This is a paragraph</p>
-<a href="//docsify.js.org/">Docsify</a>
-```
-
-
-```python
 dict(a, **b)
 ```
 
-
-
-
-    {'a': 1, 'b': 2, 'c': 3, 'aa': 1, 'bb': 2, 'cc': 3}
-
-
+{'a': 1, 'b': 2, 'c': 3, 'aa': 1, 'bb': 2, 'cc': 3}
 
 
 ```python
@@ -41,11 +23,7 @@ c.update(b)
 c
 ```
 
-
-
-
-    {'a': 1, 'b': 2, 'c': 3, 'aa': 1, 'bb': 2, 'cc': 3}
-
+{'a': 1, 'b': 2, 'c': 3, 'aa': 1, 'bb': 2, 'cc': 3}
 
 
 ### 字典使用注意：for 循环过程中，不能改变字典的键值序列。否则会报错 
@@ -59,9 +37,6 @@ for key, value in example_dict.items():
         
 # 针对此种情况，类似于列表for循环过程中删除一样，另存一个变量，存储需要操作的键值对，在for结束时操作即可
 
-```
-
-
     ---------------------------------------------------------------------------
 
     RuntimeError                              Traceback (most recent call last)
@@ -74,7 +49,7 @@ for key, value in example_dict.items():
 
 
     RuntimeError: dictionary changed size during iteration
-
+```
 
 ### 字典删除键值对：pop
 
@@ -84,23 +59,14 @@ example_dict= {"A":1, "B":2}
 example_dict.pop("A")
 ```
 
-
-
-
-    1
-
-
+1
 
 
 ```python
 example_dict
 ```
 
-
-
-
-    {'B': 2}
-
+{'B': 2}
 
 
 ## 字符串的替换提取
@@ -123,8 +89,8 @@ print(vars)
 print(cons)
 ```
 
-    ['B2_edge', 'B2_flap']
-    ['edge', 'eb1', 'flap', 'eb2 ']
+['B2_edge', 'B2_flap']
+['edge', 'eb1', 'flap', 'eb2 ']
 
 
 ### 替换特殊字符
@@ -141,7 +107,7 @@ str_var_2
 
 
 
-    '【0.5】 + 10 + 【0.5】'
+'【0.5】 + 10 + 【0.5】'
 
 
 
@@ -155,7 +121,7 @@ re.sub(r"[【,】]","",str_var_2)
 
 
 
-    '-(([B2_edge] -edge)*eb1+([B2_flap] -flap)*eb2 )'
+'-(([B2_edge] -edge)*eb1+([B2_flap] -flap)*eb2 )'
 
 
 
@@ -176,7 +142,7 @@ str_s
 
 
 
-    'sdfasasfasdfasdf'
+'sdfasasfasdfasdf'
 
 
 
@@ -191,7 +157,7 @@ str_s.find("测试")
 
 
 
-    -1
+-1
 
 
 
@@ -205,7 +171,7 @@ re.search(r"asdfas", str_s).group()
 
 
 
-    'asdfas'
+'asdfas'
 
 
 
@@ -223,8 +189,8 @@ result_2 = re.findall(r"文本(.+)结束", str_test, re.DOTALL)
 print(result_2)
 ```
 
-    []
-    ['\n第一行\n第二行\n第三行\n']
+[]
+['\n第一行\n第二行\n第三行\n']
 
 
 ### 正则提取表达式中的非运算符
@@ -259,27 +225,27 @@ pp.pprint(expr_factors_list)
 
 ```
 
-    [['75216.86',
-      'Twr_D009410_BS1',
-      '6350.94',
-      '1000',
-      'cos',
-      'WTG_Nac_Pos',
-      '318.5',
-      'pi',
-      '180',
-      '74934.65',
-      'Twr_D009410_BS2',
-      '77.56',
-      '1000',
-      'sin',
-      'WTG_Nac_Pos',
-      '318.5',
-      'pi',
-      '180'],
-     ['-27356.4', 'Twr_D076400_Trq', '3.619252E+03', '1000'],
-     ['NacMF_Zone2HS1_BS1', '394194812.267713', '107181569.455591'],
-     ['Hub_PB2B49_BS4', '379273707.376435', '-666004630.15302']]
+[['75216.86',
+    'Twr_D009410_BS1',
+    '6350.94',
+    '1000',
+    'cos',
+    'WTG_Nac_Pos',
+    '318.5',
+    'pi',
+    '180',
+    '74934.65',
+    'Twr_D009410_BS2',
+    '77.56',
+    '1000',
+    'sin',
+    'WTG_Nac_Pos',
+    '318.5',
+    'pi',
+    '180'],
+    ['-27356.4', 'Twr_D076400_Trq', '3.619252E+03', '1000'],
+    ['NacMF_Zone2HS1_BS1', '394194812.267713', '107181569.455591'],
+    ['Hub_PB2B49_BS4', '379273707.376435', '-666004630.15302']]
 
 
 #### 验证提取到的是数字还是变量
@@ -302,23 +268,23 @@ for expr_factors in expr_factors_list:
             print(factor)
 ```
 
-    75216.86
-    6350.94
-    1000
-    318.5
-    180
-    74934.65
-    77.56
-    1000
-    318.5
-    180
-    -27356.4
-    3.619252E+03
-    1000
-    394194812.267713
-    107181569.455591
-    379273707.376435
-    -666004630.15302
+75216.86
+6350.94
+1000
+318.5
+180
+74934.65
+77.56
+1000
+318.5
+180
+-27356.4
+3.619252E+03
+1000
+394194812.267713
+107181569.455591
+379273707.376435
+-666004630.15302
 
 
 ### 正则按条件替换字符
@@ -333,7 +299,7 @@ result = re.sub(r"([+\-*/()]+|,|^)pi([+\-*/()]+|$|,)", "\g<1>3.1415926\g<2>", st
 print(result)
 ```
 
-    A_5pibe+5*3.1415926/180
+A_5pibe+5*3.1415926/180
 
 
 #### 利用前后回顾
@@ -349,7 +315,7 @@ result_1 = pattern.sub("3.1415926",str_test_1)
 print(result_1)
 ```
 
-    A_5pibe+5*3.1415926/180
+A_5pibe+5*3.1415926/180
 
 
 ### 正则查找文中重复的字符串
@@ -364,7 +330,7 @@ re.findall(r'((\w)\2+)', str_test)
 
 
 
-    [('aaa', 'a'), ('ccc', 'c'), ('11', '1')]
+[('aaa', 'a'), ('ccc', 'c'), ('11', '1')]
 
 
 
@@ -376,7 +342,7 @@ re.findall(r'((\w)\2+)', str_test)
 
 
 
-    ['aaa', 'ccc', '11']
+['aaa', 'ccc', '11']
 
 
 
@@ -418,10 +384,10 @@ print(set6)
 # print(set4 - set1)
 ```
 
-    0
-    {2, 3, 4, 5, 6}
-    {6}
-    {1}
+0
+{2, 3, 4, 5, 6}
+{6}
+{1}
 
 
 ### 集合添加元素
@@ -470,13 +436,13 @@ def get_level(ref_value, reverse, left_close = True):
 get_level(100, True, True)
 ```
 
-    [-100.0, -10.0, 0, 10.0, 100.0]
+[-100.0, -10.0, 0, 10.0, 100.0]
 
 
 
 
 
-    1
+1
 
 
 
@@ -492,7 +458,7 @@ example_list
 
 
 
-    [0, 1, 2, 3]
+[0, 1, 2, 3]
 
 
 
@@ -512,7 +478,7 @@ time_str
 
 
 
-    1543801758.0
+1543801758.0
 
 
 
@@ -573,8 +539,8 @@ print(cal)
     以下输出2016年1月份的日历:
         January 2016
     Mo Tu We Th Fr Sa Su
-                 1  2  3
-     4  5  6  7  8  9 10
+                1  2  3
+    4  5  6  7  8  9 10
     11 12 13 14 15 16 17
     18 19 20 21 22 23 24
     25 26 27 28 29 30 31
@@ -596,7 +562,7 @@ datetime.now().isocalendar()
 
 
 
-    (2019, 48, 4)
+(2019, 48, 4)
 
 
 
@@ -620,12 +586,12 @@ Dog.__dict__
 
 
 
-    mappingproxy({'__module__': '__main__',
-                  'color': 'red',
-                  'eat': <function __main__.Dog.eat()>,
-                  '__dict__': <attribute '__dict__' of 'Dog' objects>,
-                  '__weakref__': <attribute '__weakref__' of 'Dog' objects>,
-                  '__doc__': None})
+mappingproxy({'__module__': '__main__',
+                'color': 'red',
+                'eat': <function __main__.Dog.eat()>,
+                '__dict__': <attribute '__dict__' of 'Dog' objects>,
+                '__weakref__': <attribute '__weakref__' of 'Dog' objects>,
+                '__doc__': None})
 
 
 
@@ -636,16 +602,16 @@ Dog.__dict__['look'] = '看'
 ```
 
 
-    ---------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
-    TypeError                                 Traceback (most recent call last)
+TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-33-b0f6cecb2756> in <module>
-          1 #　类外部可以通过__dict__查看，但无法修改或添加。但对象的属性可以通过这个修改添加
-    ----> 2 Dog.__dict__['look'] = '看'
-    
+<ipython-input-33-b0f6cecb2756> in <module>
+        1 #　类外部可以通过__dict__查看，但无法修改或添加。但对象的属性可以通过这个修改添加
+----> 2 Dog.__dict__['look'] = '看'
 
-    TypeError: 'mappingproxy' object does not support item assignment
+
+TypeError: 'mappingproxy' object does not support item assignment
 
 
 ## 对象属性操作
@@ -659,7 +625,7 @@ dog.__dict__
 
 
 
-    {}
+{}
 
 
 
@@ -687,7 +653,7 @@ dog_copy.color
 
 
 
-    'red'
+'red'
 
 
 
